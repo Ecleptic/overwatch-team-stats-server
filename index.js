@@ -21,6 +21,6 @@ const playerService = new PlayerService(cachingService)
 
 controller(app, playerService)
 
-app.listen(8080, () => {
-  console.log('💩')
+app.listen(config.port, () => {
+  console.log('App listening.')
 })
