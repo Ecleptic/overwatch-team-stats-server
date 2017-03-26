@@ -1,0 +1,24 @@
+{
+  "name": "OW_API",
+  "version": "0.0.1",
+  "description": "Boilerplate for node ",
+  "engines": {
+    "node": "6.2.1"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "node-fetch": "^1.6.3",
+    "redis": "^2.7.1",
+    "request": "^2.81.0"
+  },
+  "keywords": [
+    "node",
+    "express"
+  ],
+  "license": "MIT"
+}
