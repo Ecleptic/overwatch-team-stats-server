@@ -1,7 +1,7 @@
 {
   "name": "OW_API",
-  "version": "0.0.1",
-  "description": "Boilerplate for node ",
+  "version": "1.0.0",
+  "description": "Backend to fetch overwatch player data",
   "engines": {
     "node": "6.2.1"
   },
