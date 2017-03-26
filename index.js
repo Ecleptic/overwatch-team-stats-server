@@ -1,6 +1,7 @@
 const express = require('express')
 const redis = require('redis')
 
+const config = require('./config')
 const controller = require('./controller')
 const CachingService = require('./services/cachingService')
 const PlayerService = require('./services/playerService')
@@ -13,7 +14,7 @@ app.use(function(req, res, next) {
   next();
 });
 
-const redisClient = redis.createClient('//localhost:6379')
+const redisClient = redis.createClient(config.redisUrl)
 
 const cachingService = new CachingService(redisClient)
 const playerService = new PlayerService(cachingService)
