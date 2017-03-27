@@ -1,5 +1,7 @@
 const request = require('request')
 
+const config = require('../config')
+
 module.exports = class PlayerService {
   constructor (cachingService) {
     this._cachingService = cachingService // Underscore means private
@@ -33,7 +35,7 @@ module.exports = class PlayerService {
       const headers = {
         'User-Agent': (Math.random() * (10000 - 0) + 0).toString() + 'Sorry bruh'
       }
-      const url =  `http://owapi.net/api/v3/u/${userId}/blob`
+      const url = `${config.overwatchApiBaseUrl}/${userId}/blob`
 
       request({ headers, url }, (error, response, body) => {
         if (error != null) {
